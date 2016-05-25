@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x37-I9-IrY" customClass="BTHotRecommendHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0r4-Qs-UMw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="12"/>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="Vap-Bc-qJS"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hot_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sph-Li-G2m">
+                    <rect key="frame" x="0.0" y="33" width="22" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="T4y-kZ-7na"/>
+                        <constraint firstAttribute="height" constant="20" id="cqo-8f-07y"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="T4y-kZ-7na"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnH-Ht-aY6">
+                    <rect key="frame" x="24" y="34" width="56" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.51764705882352946" green="0.51764705882352946" blue="0.51764705882352946" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="qnH-Ht-aY6" firstAttribute="leading" secondItem="Sph-Li-G2m" secondAttribute="trailing" constant="2" id="2Kr-uZ-efc"/>
+                <constraint firstItem="Sph-Li-G2m" firstAttribute="leading" secondItem="x37-I9-IrY" secondAttribute="leading" id="Dc1-9K-Ftv"/>
+                <constraint firstAttribute="trailing" secondItem="0r4-Qs-UMw" secondAttribute="trailing" id="P4F-qN-57n"/>
+                <constraint firstItem="0r4-Qs-UMw" firstAttribute="leading" secondItem="x37-I9-IrY" secondAttribute="leading" id="UoA-NE-fVQ"/>
+                <constraint firstItem="Sph-Li-G2m" firstAttribute="centerY" secondItem="x37-I9-IrY" secondAttribute="centerY" constant="12" id="bjA-wr-261"/>
+                <constraint firstItem="qnH-Ht-aY6" firstAttribute="centerY" secondItem="Sph-Li-G2m" secondAttribute="centerY" id="lbM-uJ-Daf"/>
+                <constraint firstItem="0r4-Qs-UMw" firstAttribute="top" secondItem="x37-I9-IrY" secondAttribute="top" id="vhb-UD-gcy"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="Sph-Li-G2m" id="BGr-cR-RcA"/>
+                <outlet property="nameLabel" destination="qnH-Ht-aY6" id="4Ev-EC-hg1"/>
+            </connections>
+            <point key="canvasLocation" x="306" y="311"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="hot_icon" width="22" height="30"/>
+    </resources>
+</document>

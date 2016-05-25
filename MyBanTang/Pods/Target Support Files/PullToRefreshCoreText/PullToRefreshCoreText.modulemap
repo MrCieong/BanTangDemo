@@ -1,0 +1,6 @@
+framework module PullToRefreshCoreText {
+  umbrella header "PullToRefreshCoreText-umbrella.h"
+
+  export *
+  module * { export * }
+}

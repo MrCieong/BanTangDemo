@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'MyBanTang' do
+  pod 'AFNetworking', '~> 3.0'
+pod 'LTNavigationBar', '~> 2.1.2'
+pod 'PullToRefreshCoreText', '~> 0.2'
+pod 'FDFullscreenPopGesture', '1.1'
+pod 'SDCycleScrollView','~> 1.64'
+pod 'MJExtension', '~> 3.0.10'
+pod 'SDWebImage', '~> 3.7.6'
+pod 'YYWebImage'
+pod 'Masonry', '~> 1.0.0'
+pod 'XHTagView'
+end

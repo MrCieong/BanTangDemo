@@ -1,0 +1,6 @@
+framework module XHTagView {
+  umbrella header "XHTagView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,62 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - FDFullscreenPopGesture (1.1)
+  - LTNavigationBar (2.1.2)
+  - Masonry (1.0.0)
+  - MJExtension (3.0.10)
+  - PullToRefreshCoreText (0.2)
+  - SDCycleScrollView (1.64):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - XHTagView (2.0)
+  - YYCache (1.0.3)
+  - YYImage (1.0.1):
+    - YYImage/Core (= 1.0.1)
+  - YYImage/Core (1.0.1)
+  - YYWebImage (1.0.3):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - FDFullscreenPopGesture (= 1.1)
+  - LTNavigationBar (~> 2.1.2)
+  - Masonry (~> 1.0.0)
+  - MJExtension (~> 3.0.10)
+  - PullToRefreshCoreText (~> 0.2)
+  - SDCycleScrollView (~> 1.64)
+  - SDWebImage (~> 3.7.6)
+  - XHTagView
+  - YYWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  LTNavigationBar: bfc5fc06a83463009b9d99675f2a32dcbb631b00
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  PullToRefreshCoreText: c843e71fc5ae5b033c0281067368905efd05c7b2
+  SDCycleScrollView: 806fedb9342ab03b58b84442f985517b42c7cbb7
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  XHTagView: 288a6bdd22f48735c9b474902b7e0d9535c537c8
+  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+  YYImage: b41b45bc5f32bfcdf67bdfb9c09da9e9832357c0
+  YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
+
+COCOAPODS: 0.39.0
