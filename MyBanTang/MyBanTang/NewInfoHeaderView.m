@@ -11,6 +11,7 @@
 #import "BTNewInfo.h"
 #import "BTHelper.h"
 #import "UIView+frameAdjust.h"
+#import "Masonry.h"
 @interface NewInfoHeaderView ()
 
 

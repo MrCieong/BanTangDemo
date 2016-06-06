@@ -169,9 +169,9 @@ static const CGFloat kThresholdOffsetY = 100;
     self.topImageView.frame = CGRectMake(kScreen_Width * (1 - scale) / 2.0, 0, kScreen_Width * scale, kTopImageViewHeight * scale);
     
   } else {
-//    if (offsetY <= kTopImageViewHeight) {
-//      self.topImageView.y = -offsetY;
-//    }
+    if (offsetY <= kTopImageViewHeight) {
+      self.topImageView.y = -offsetY;
+    }
     
     if (offsetY > kThresholdOffsetY) {
       self.navigationBarAlpha = MAX(0, MIN(1, (offsetY - kThresholdOffsetY ) / 64));;
@@ -198,6 +198,16 @@ static const CGFloat kThresholdOffsetY = 100;
   detailVC.imageIndex = index;
   detailVC.images = images;
   [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (void)didSelectedLikeButtonWithCellIndexPath:(NSIndexPath *)indexPath {
+  UIViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:@"BTLoginViewController"];
+  [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)didSelectedCommendButtonWithCellIndexPath:(NSIndexPath *)indexPath {
+  UIViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:@"BTLoginViewController"];
+  [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

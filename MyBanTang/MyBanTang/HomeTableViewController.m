@@ -119,6 +119,7 @@ static const CGFloat kTitlesViewHeight = 40.0;
   
   UIButton *rightItemButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 33, 33)];
   [rightItemButton setImage:[UIImage imageNamed:@"home_sign_icon"] forState:UIControlStateNormal];
+  [rightItemButton addTarget:self action:@selector(tapRightItemButton) forControlEvents:UIControlEventTouchUpInside];
   self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc] initWithCustomView:rightItemButton];
 
   UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 150, 33)];
@@ -136,6 +137,10 @@ static const CGFloat kTitlesViewHeight = 40.0;
   
 }
 
+- (void)tapRightItemButton {
+  UIViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:@"BTLoginViewController"];
+  [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];

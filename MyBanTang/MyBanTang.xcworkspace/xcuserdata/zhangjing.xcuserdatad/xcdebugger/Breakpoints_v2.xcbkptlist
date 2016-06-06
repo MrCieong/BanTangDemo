@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyBanTang/BTHotRecommendTableViewCell.m"
-            timestampString = "485830287.996891"
+            timestampString = "485923578.553841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-layoutSubviews"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyBanTang/BTHotRecommendTableViewCell.m"
-            timestampString = "485830287.996891"
+            timestampString = "485923578.553841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "-willMoveToSuperview:"
             landmarkType = "5">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyBanTang/BTHotRecommendTableViewCell.m"
-            timestampString = "485830287.996891"
+            timestampString = "485923578.553841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "-setPostInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyBanTang/BTHotRecommendTableViewCell.m"
-            timestampString = "485830287.996891"
+            timestampString = "485923578.553841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "-tappedTagView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyBanTang/BTHotRecommendTableViewCell.m"
-            timestampString = "485830287.996891"
+            timestampString = "485923578.553841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
             landmarkName = "-setPostInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -115,13 +115,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyBanTang/BTProductDetailViewController.m"
-            timestampString = "485860815.069067"
+            filePath = "MyBanTang/BTCategoryCollectionFooter.m"
+            timestampString = "486096244.845167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "-scrollViewDidScroll:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "+categoryFooterHeightByCategorysCount:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

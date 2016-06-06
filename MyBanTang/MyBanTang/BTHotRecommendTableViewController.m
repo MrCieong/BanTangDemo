@@ -13,7 +13,7 @@
 
 static NSString *kBTHotRecommendTableViewCellIdentifier = @"BTHotRecommendTableViewCell.h";
 
-@interface BTHotRecommendTableViewController ()
+@interface BTHotRecommendTableViewController () <BTHotRecommendTableViewCellDelegate>
 
 @end
 
@@ -24,13 +24,15 @@ static NSString *kBTHotRecommendTableViewCellIdentifier = @"BTHotRecommendTableV
   [self.tableView registerClass:[BTHotRecommendTableViewCell class] forCellReuseIdentifier:kBTHotRecommendTableViewCellIdentifier];
   self.tableView.backgroundColor = BTGobalTableViewBGColor;
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedIndex inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
-  [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedIndex inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-
+ 
 }
 
 #pragma mark - Table view data source
@@ -50,11 +52,18 @@ static NSString *kBTHotRecommendTableViewCellIdentifier = @"BTHotRecommendTableV
     
   cell.postInfo = [self postInfoAtIndexPath:indexPath];
   cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  cell.delegate = self;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return [BTHotRecommendTableViewCell cellHeightWithPostInfo:[self postInfoAtIndexPath:indexPath]];
+}
+
+#pragma mark - BTHotRecommendTableViewCellDelegate
+- (void)tapAction {
+  UIViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:@"BTLoginViewController"];
+  [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

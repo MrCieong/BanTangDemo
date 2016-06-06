@@ -9,9 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @class BTCommunityPostInfo;
+
+@protocol BTHotRecommendTableViewCellDelegate <NSObject>
+
+- (void)tapAction;
+
+@end
+
 @interface BTHotRecommendTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) BTCommunityPostInfo *postInfo;
+
+@property (nonatomic, weak) id<BTHotRecommendTableViewCellDelegate> delegate;
 
 + (CGFloat)cellHeightWithPostInfo:(BTCommunityPostInfo *)postInfo;
 

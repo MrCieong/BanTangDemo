@@ -11,7 +11,7 @@
 #import "Constant.h"
 #import "UIView+frameAdjust.h"
 #import "UIImageView+YYWebImage.h"
-#import "BTProductDetailTableView.h"
+
 
 @interface BTProductDetailViewController () <UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate>
 
@@ -36,11 +36,11 @@
   self.automaticallyAdjustsScrollViewInsets = NO;
   [self.view addSubview:self.topScrollView];
   [self.view addSubview:self.tableView];
-  [self.view addSubview:self.contentScrollView];
+//  [self.view addSubview:self.contentScrollView];
   
-  self.contentScrollView.userInteractionEnabled = NO;
-  [self.topScrollView addGestureRecognizer:self.contentScrollView.panGestureRecognizer];
-  [self.tableView addGestureRecognizer:self.contentScrollView.panGestureRecognizer];
+//  self.contentScrollView.userInteractionEnabled = NO;
+//  [self.topScrollView addGestureRecognizer:self.contentScrollView.panGestureRecognizer];
+//  [self.tableView addGestureRecognizer:self.contentScrollView.panGestureRecognizer];
   [self updateView];
 }
 
@@ -104,11 +104,17 @@
 
 -(UITableView *)tableView {
   if (!_tableView) {
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.topScrollView.tail, kScreen_Width, kScreen_Height)];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height)];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.backgroundColor = [UIColor clearColor];
+    UIScrollView *headerView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width , kScreen_Width)];
+    headerView.userInteractionEnabled = NO;
+    headerView.contentSize = CGSizeMake(kScreen_Width + 1, kScreen_Width);
+//    [headerView addGestureRecognizer:self.topScrollView.panGestureRecognizer];
+//    _tableView.userInteractionEnabled = NO;
+    _tableView.tableHeaderView = headerView;
     _tableView.tableFooterView = [UIView new];
   }
   return _tableView;
@@ -121,15 +127,15 @@
   return _tableHeaderView;
 }
 
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//  self.tableView.contentOffset = CGPointMake(0, self.contentScrollView.contentOffset.y) ;
-  CGFloat offsetY =  self.contentScrollView.contentOffset.y;
-  NSLog(@"offsetY: %f", offsetY);
-  if (offsetY <= kScreen_Width) {
-    self.tableView.y = kScreen_Width - offsetY;
-  }
-  
-}
+//#pragma mark - UIScrollViewDelegate
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+////  self.tableView.contentOffset = CGPointMake(0, self.contentScrollView.contentOffset.y) ;
+//  CGFloat offsetY =  self.contentScrollView.contentOffset.y;
+//  NSLog(@"offsetY: %f", offsetY);
+//  if (offsetY <= kScreen_Width) {
+//    self.tableView.y = kScreen_Width - offsetY;
+//  }
+//  
+//}
 
 @end

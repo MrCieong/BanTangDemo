@@ -122,9 +122,12 @@ static const CGFloat kRankImageViewWidth = 15.0;
   [_commentButton setTitleColor:kUIColorFromRGB(0xFF727272) forState:UIControlStateNormal];
   [_commentButton setImage:[UIImage imageNamed:@"product_not_commenticon"] forState:UIControlStateNormal];
   [self.commentButton setTitle:@" 评论" forState:UIControlStateNormal];
+  [_commentButton addTarget:self action:@selector(tapCommentButton) forControlEvents:UIControlEventTouchUpInside];
   
   _likesButton = [UIButton new];
+  [_likesButton setImage:[UIImage imageNamed:@"community_un_like"] forState:UIControlStateNormal];
   [_likesButton setTitleColor:kUIColorFromRGB(0xFF727272) forState:UIControlStateNormal];
+  [_likesButton addTarget:self action:@selector(tapLikeButton) forControlEvents:UIControlEventTouchUpInside];
   
   
   _buyButton = [UIButton new];
@@ -258,7 +261,7 @@ static const CGFloat kRankImageViewWidth = 15.0;
   self.userListView = [[BTLikesUserListView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, [BTLikesUserListView likesUserListViewHeight]) likesList:product.likes_list likesString:product.likes];
   [self addSubview:self.userListView];
   
-  [self.likesButton setTitle:[NSString stringWithFormat:@"❤︎ %@", product.likes] forState:UIControlStateNormal];
+  [self.likesButton setTitle:[NSString stringWithFormat:@" %@", product.likes] forState:UIControlStateNormal];
   if (product.comments.length > 0 && ![product.comments isEqualToString:@"0"]) {
     [self.commentButton setTitle:[NSString stringWithFormat:@" %@", product.comments] forState:UIControlStateNormal];
   }
@@ -305,6 +308,17 @@ static const CGFloat kRankImageViewWidth = 15.0;
     }
     
     [self.delegate tappedImageViewWithCellIndexPath:self.indexPath imageIndex:index images:images];
+  }
+}
+
+- (void)tapCommentButton {
+  if ([self.delegate respondsToSelector:@selector(didSelectedCommendButtonWithCellIndexPath:)]) {
+    [self.delegate didSelectedCommendButtonWithCellIndexPath:self.indexPath];
+  }
+}
+- (void)tapLikeButton {
+  if ([self.delegate respondsToSelector:@selector(didSelectedLikeButtonWithCellIndexPath:)]) {
+    [self.delegate didSelectedLikeButtonWithCellIndexPath:self.indexPath];
   }
 }
 

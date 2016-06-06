@@ -29,6 +29,7 @@ static NSString * const kBTCommuntiyPostInfoCellIdentifier = @"BTCommuntiyPostIn
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"单品列表";
   [self setupView];
   [self loadDataFromStart:YES];
 }

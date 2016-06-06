@@ -45,7 +45,6 @@
 		614E81111CF5966700AEF333 /* AJPhotoTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E810B1CF5966700AEF333 /* AJPhotoTapDetectingImageView.m */; };
 		614E81121CF5966700AEF333 /* AJPhotoZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E810D1CF5966700AEF333 /* AJPhotoZoomingScrollView.m */; };
 		614E81131CF5966700AEF333 /* AJTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E810F1CF5966700AEF333 /* AJTapDetectingView.m */; };
-		614E81171CF59A8300AEF333 /* BTProductDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E81161CF59A8300AEF333 /* BTProductDetailTableView.m */; };
 		614F52DD1CECB98F000F69FB /* BTLikesUserListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F52DC1CECB98F000F69FB /* BTLikesUserListView.m */; };
 		614F52E01CED433E000F69FB /* BTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F52DF1CED433E000F69FB /* BTWebViewController.m */; };
 		614F52E31CED502E000F69FB /* UIImage+RenderedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F52E21CED502E000F69FB /* UIImage+RenderedImage.m */; };
@@ -60,7 +59,7 @@
 		614F53271CEDDA70000F69FB /* BTHotRecommendHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F53261CEDDA70000F69FB /* BTHotRecommendHeader.xib */; };
 		614F532A1CEDDAF2000F69FB /* BTHotRecommendFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F53291CEDDAF2000F69FB /* BTHotRecommendFooter.m */; };
 		614F532C1CEDDB02000F69FB /* BTHotRecommendFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F532B1CEDDB02000F69FB /* BTHotRecommendFooter.xib */; };
-		614F53311CEE91E4000F69FB /* BTCategoryCollectionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F53301CEE91E4000F69FB /* BTCategoryCollectionFooter.m */; };
+		614F53311CEE91E4000F69FB /* BTCategoryMenuFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F53301CEE91E4000F69FB /* BTCategoryMenuFooter.m */; };
 		614F53361CEEC141000F69FB /* BTCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F53351CEEC141000F69FB /* BTCategoryCell.m */; };
 		614F53381CEEC152000F69FB /* BTCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614F53371CEEC152000F69FB /* BTCategoryCell.xib */; };
 		614F533B1CEEE187000F69FB /* BTCommunityInfoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F533A1CEEE187000F69FB /* BTCommunityInfoCollectionViewController.m */; };
@@ -92,6 +91,10 @@
 		6166CA9C1CEB76A200CF22F1 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166CA841CEB76A200CF22F1 /* UIView+frameAdjust.m */; };
 		6166CA9E1CEB778C00CF22F1 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6166CA9D1CEB778C00CF22F1 /* Base.lproj */; };
 		6166CAA91CEC1E8800CF22F1 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166CAA81CEC1E8800CF22F1 /* UILabel+Extension.m */; };
+		61A6C2C01CF67A2000BB97FF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A6C2BF1CF67A2000BB97FF /* Login.storyboard */; };
+		61A6C2C31CF67E7700BB97FF /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A6C2C21CF67E7700BB97FF /* BTLoginViewController.m */; };
+		61A6C2C81CF67F2F00BB97FF /* BTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A6C2C71CF67F2F00BB97FF /* BTMineViewController.m */; };
+		61A6C2CB1CF67F3A00BB97FF /* BTMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A6C2CA1CF67F3A00BB97FF /* BTMessageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,8 +167,6 @@
 		614E810D1CF5966700AEF333 /* AJPhotoZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPhotoZoomingScrollView.m; sourceTree = "<group>"; };
 		614E810E1CF5966700AEF333 /* AJTapDetectingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJTapDetectingView.h; sourceTree = "<group>"; };
 		614E810F1CF5966700AEF333 /* AJTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJTapDetectingView.m; sourceTree = "<group>"; };
-		614E81151CF59A8300AEF333 /* BTProductDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTProductDetailTableView.h; sourceTree = "<group>"; };
-		614E81161CF59A8300AEF333 /* BTProductDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTProductDetailTableView.m; sourceTree = "<group>"; };
 		614F52DB1CECB98F000F69FB /* BTLikesUserListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLikesUserListView.h; sourceTree = "<group>"; };
 		614F52DC1CECB98F000F69FB /* BTLikesUserListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLikesUserListView.m; sourceTree = "<group>"; };
 		614F52DE1CED433E000F69FB /* BTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTWebViewController.h; sourceTree = "<group>"; };
@@ -192,8 +193,8 @@
 		614F53281CEDDAF2000F69FB /* BTHotRecommendFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTHotRecommendFooter.h; sourceTree = "<group>"; };
 		614F53291CEDDAF2000F69FB /* BTHotRecommendFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHotRecommendFooter.m; sourceTree = "<group>"; };
 		614F532B1CEDDB02000F69FB /* BTHotRecommendFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BTHotRecommendFooter.xib; sourceTree = "<group>"; };
-		614F532F1CEE91E4000F69FB /* BTCategoryCollectionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCategoryCollectionFooter.h; sourceTree = "<group>"; };
-		614F53301CEE91E4000F69FB /* BTCategoryCollectionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCategoryCollectionFooter.m; sourceTree = "<group>"; };
+		614F532F1CEE91E4000F69FB /* BTCategoryMenuFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCategoryMenuFooter.h; sourceTree = "<group>"; };
+		614F53301CEE91E4000F69FB /* BTCategoryMenuFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCategoryMenuFooter.m; sourceTree = "<group>"; };
 		614F53341CEEC141000F69FB /* BTCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCategoryCell.h; sourceTree = "<group>"; };
 		614F53351CEEC141000F69FB /* BTCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCategoryCell.m; sourceTree = "<group>"; };
 		614F53371CEEC152000F69FB /* BTCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BTCategoryCell.xib; sourceTree = "<group>"; };
@@ -252,6 +253,13 @@
 		6166CA9D1CEB778C00CF22F1 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		6166CAA71CEC1E8800CF22F1 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
 		6166CAA81CEC1E8800CF22F1 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		61A6C2BF1CF67A2000BB97FF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		61A6C2C11CF67E7700BB97FF /* BTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLoginViewController.h; sourceTree = "<group>"; };
+		61A6C2C21CF67E7700BB97FF /* BTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLoginViewController.m; sourceTree = "<group>"; };
+		61A6C2C61CF67F2F00BB97FF /* BTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTMineViewController.h; sourceTree = "<group>"; };
+		61A6C2C71CF67F2F00BB97FF /* BTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTMineViewController.m; sourceTree = "<group>"; };
+		61A6C2C91CF67F3A00BB97FF /* BTMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTMessageViewController.h; sourceTree = "<group>"; };
+		61A6C2CA1CF67F3A00BB97FF /* BTMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTMessageViewController.m; sourceTree = "<group>"; };
 		8058B4DA1478D0AD310896A8 /* Pods_MyBanTang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBanTang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69363E2ECE6A6790FB1A5AB /* Pods-MyBanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.release.xcconfig"; sourceTree = "<group>"; };
 		CE9801A0FBFDA58678FCEDA7 /* Pods-MyBanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -322,8 +330,8 @@
 				614F53281CEDDAF2000F69FB /* BTHotRecommendFooter.h */,
 				614F53291CEDDAF2000F69FB /* BTHotRecommendFooter.m */,
 				614F532B1CEDDB02000F69FB /* BTHotRecommendFooter.xib */,
-				614F532F1CEE91E4000F69FB /* BTCategoryCollectionFooter.h */,
-				614F53301CEE91E4000F69FB /* BTCategoryCollectionFooter.m */,
+				614F532F1CEE91E4000F69FB /* BTCategoryMenuFooter.h */,
+				614F53301CEE91E4000F69FB /* BTCategoryMenuFooter.m */,
 				614F53341CEEC141000F69FB /* BTCategoryCell.h */,
 				614F53351CEEC141000F69FB /* BTCategoryCell.m */,
 				614F53371CEEC152000F69FB /* BTCategoryCell.xib */,
@@ -546,8 +554,11 @@
 		6166CAA11CEB798B00CF22F1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				61A6C2BE1CF67A0A00BB97FF /* Login */,
 				614E81041CF5956B00AEF333 /* PhotoPicker */,
 				614F52E61CED5418000F69FB /* Community */,
+				61A6C2C51CF67F1F00BB97FF /* Mine */,
+				61A6C2C41CF67F1500BB97FF /* Message */,
 				614F52E41CED52E5000F69FB /* Home */,
 				614F52E51CED52EE000F69FB /* Common */,
 			);
@@ -611,8 +622,6 @@
 				611750231CF2CEE70042E429 /* BTProductListCell.xib */,
 				614E80E91CF5559200AEF333 /* BTProductDetailTableHeaderView.h */,
 				614E80EA1CF5559200AEF333 /* BTProductDetailTableHeaderView.m */,
-				614E81151CF59A8300AEF333 /* BTProductDetailTableView.h */,
-				614E81161CF59A8300AEF333 /* BTProductDetailTableView.m */,
 			);
 			name = "Home View";
 			sourceTree = "<group>";
@@ -632,6 +641,34 @@
 				61442F6E1CEF748200BA7C62 /* BTSwitchTitleView.m */,
 			);
 			name = "Common View";
+			sourceTree = "<group>";
+		};
+		61A6C2BE1CF67A0A00BB97FF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				61A6C2BF1CF67A2000BB97FF /* Login.storyboard */,
+				61A6C2C11CF67E7700BB97FF /* BTLoginViewController.h */,
+				61A6C2C21CF67E7700BB97FF /* BTLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		61A6C2C41CF67F1500BB97FF /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				61A6C2C91CF67F3A00BB97FF /* BTMessageViewController.h */,
+				61A6C2CA1CF67F3A00BB97FF /* BTMessageViewController.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		61A6C2C51CF67F1F00BB97FF /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				61A6C2C61CF67F2F00BB97FF /* BTMineViewController.h */,
+				61A6C2C71CF67F2F00BB97FF /* BTMineViewController.m */,
+			);
+			name = Mine;
 			sourceTree = "<group>";
 		};
 		691562E9E09C92956FC34C17 /* Pods */ = {
@@ -710,6 +747,7 @@
 				6117501F1CF2BDC80042E429 /* Home.storyboard in Resources */,
 				614F53381CEEC152000F69FB /* BTCategoryCell.xib in Resources */,
 				614F53401CEEED66000F69FB /* BTCommunityPostInfoCell.xib in Resources */,
+				61A6C2C01CF67A2000BB97FF /* Login.storyboard in Resources */,
 				611750241CF2CEE70042E429 /* BTProductListCell.xib in Resources */,
 				6166CA871CEB76A200CF22F1 /* Assets.xcassets in Resources */,
 				6166CA531CEB740700CF22F1 /* LaunchScreen.storyboard in Resources */,
@@ -799,6 +837,7 @@
 				61442F691CEF5F6500BA7C62 /* BTUser.m in Sources */,
 				614E80E51CF5360000AEF333 /* CYLPlusButtonSubclass.m in Sources */,
 				614E81011CF5951800AEF333 /* AJPhotoPickerViewController.m in Sources */,
+				61A6C2C81CF67F2F00BB97FF /* BTMineViewController.m in Sources */,
 				6166CA451CEB740700CF22F1 /* main.m in Sources */,
 				614F52E91CED5456000F69FB /* BTCommunityViewController.m in Sources */,
 				6166CA901CEB76A200CF22F1 /* AppDelegate.m in Sources */,
@@ -808,13 +847,13 @@
 				6166CA8D1CEB76A200CF22F1 /* MJExtensionConfig.m in Sources */,
 				614F531C1CEDB62B000F69FB /* BTHotRecommendCell.m in Sources */,
 				6166CA971CEB76A200CF22F1 /* BTFooterLoadingView.m in Sources */,
+				61A6C2CB1CF67F3A00BB97FF /* BTMessageViewController.m in Sources */,
 				614F52E01CED433E000F69FB /* BTWebViewController.m in Sources */,
 				614F532A1CEDDAF2000F69FB /* BTHotRecommendFooter.m in Sources */,
 				614E81071CF5958600AEF333 /* BTPhotoPickerViewController.m in Sources */,
 				6166CAA91CEC1E8800CF22F1 /* UILabel+Extension.m in Sources */,
 				614F52E31CED502E000F69FB /* UIImage+RenderedImage.m in Sources */,
 				614F533E1CEEED4F000F69FB /* BTCommunityPostInfoCell.m in Sources */,
-				614E81171CF59A8300AEF333 /* BTProductDetailTableView.m in Sources */,
 				6166CA931CEB76A200CF22F1 /* HomeTopicCell.m in Sources */,
 				614E81121CF5966700AEF333 /* AJPhotoZoomingScrollView.m in Sources */,
 				6166CA961CEB76A200CF22F1 /* BTHomeData+Request.m in Sources */,
@@ -832,9 +871,10 @@
 				61442F6F1CEF748200BA7C62 /* BTSwitchTitleView.m in Sources */,
 				614F531F1CEDB752000F69FB /* BTCommunityPostInfo.m in Sources */,
 				614F52F51CED59F2000F69FB /* BTCommunity+Request.m in Sources */,
-				614F53311CEE91E4000F69FB /* BTCategoryCollectionFooter.m in Sources */,
+				614F53311CEE91E4000F69FB /* BTCategoryMenuFooter.m in Sources */,
 				614E80FF1CF5951800AEF333 /* AJPhotoListCellTapView.m in Sources */,
 				614E80CC1CF472F100AEF333 /* CYLTabBarController.m in Sources */,
+				61A6C2C31CF67E7700BB97FF /* BTLoginViewController.m in Sources */,
 				6166CA981CEB76A200CF22F1 /* HomeCycleView.m in Sources */,
 				614F53361CEEC141000F69FB /* BTCategoryCell.m in Sources */,
 				614E80E81CF53FFE00AEF333 /* BTProductDetailViewController.m in Sources */,

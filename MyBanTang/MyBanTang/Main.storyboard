@@ -306,10 +306,10 @@
             </objects>
             <point key="canvasLocation" x="678" y="676"/>
         </scene>
-        <!--View Controller-->
+        <!--Message View Controller-->
         <scene sceneID="3oZ-cz-ELN">
             <objects>
-                <viewController id="X3t-GW-6mW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BTMessageViewController" id="X3t-GW-6mW" customClass="BTMessageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3di-uK-fg2"/>
                         <viewControllerLayoutGuide type="bottom" id="wR7-hP-pQv"/>
@@ -317,6 +317,12 @@
                     <view key="view" contentMode="scaleToFill" id="zTB-go-cml">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="community_commnetinput_bg" translatesAutoresizingMaskIntoConstraints="NO" id="jlb-Yf-EPH">
+                                <rect key="frame" x="43" y="388" width="346" height="57"/>
+                                <rect key="contentStretch" x="0.5" y="0.0" width="0.0" height="1"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ogO-WN-yf5"/>
@@ -325,10 +331,10 @@
             </objects>
             <point key="canvasLocation" x="1499" y="1355"/>
         </scene>
-        <!--View Controller-->
+        <!--Mine View Controller-->
         <scene sceneID="dTv-I1-KZ3">
             <objects>
-                <viewController id="vjU-aP-KcU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BTMineViewController" id="vjU-aP-KcU" customClass="BTMineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BSW-Bo-HYb"/>
                         <viewControllerLayoutGuide type="bottom" id="GPQ-Oy-zLZ"/>
@@ -363,7 +369,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4L-Ss-AJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614" y="1452"/>
+            <point key="canvasLocation" x="434" y="1428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3QK-yE-CLE">
@@ -388,6 +394,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="community_commnetinput_bg" width="37" height="30"/>
         <image name="tab_publish_add" width="36" height="32"/>
         <image name="tab_publish_add_pressed" width="36" height="32"/>
         <image name="tab_分类" width="27" height="21"/>

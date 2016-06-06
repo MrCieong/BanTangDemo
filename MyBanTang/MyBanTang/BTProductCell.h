@@ -12,6 +12,8 @@
 
 - (void)didSelectedBuyButtonWithCellIndexPath:(NSIndexPath *)indexPath;
 - (void)tappedImageViewWithCellIndexPath:(NSIndexPath *)indexPath imageIndex:(int)index images:(NSArray *)imageView;
+- (void)didSelectedLikeButtonWithCellIndexPath:(NSIndexPath *)indexPath;
+- (void)didSelectedCommendButtonWithCellIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

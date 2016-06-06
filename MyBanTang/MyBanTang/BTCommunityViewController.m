@@ -18,7 +18,7 @@
 #import "BTHotRecommendHeader.h"
 #import "BTHotRecommendFooter.h"
 #import "UIScrollView+PullToRefreshCoreText.h"
-#import "BTCategoryCollectionFooter.h"
+#import "BTCategoryMenuFooter.h"
 #import "BTCategoryCell.h"
 #import "BTHotRecommendHeader.h"
 #import "BTCommunityInfoCollectionViewController.h"
@@ -28,10 +28,10 @@
 static NSString *kHotRecommendCollectionViewCell = @"HotRecommendCollectionViewCell";
 static NSString *kBTHotRecommendFooterIdentifier = @"BTHotRecommendFooterIdentifier";
 static NSString *kBTHotRecommendHeaderIdentifier = @"BTHotRecommendHeaderIdentifier";
-static NSString *kBTCategoryCollectionFooterIdentifier = @"BTCategoryCollectionFooterIdentifier";
+static NSString *kBTCategoryMenuFooterIdentifier = @"BTCategoryMenuFooterIdentifier";
 static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
 
-@interface BTCommunityViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface BTCommunityViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, BTCategoryMenuFooterDelegate>
 
 @property (nonatomic, strong) BTLoadingView *loadingView;
 @property (nonatomic, strong) BTHotRecommendFooter *footerLoadingView;
@@ -40,7 +40,7 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
 @property (nonatomic, strong) UICollectionView *hotRecommendCollectionView;
 @property (nonatomic, strong) NSArray *categroys;
 @property (nonatomic, strong) NSArray *hotRecommends;
-@property (nonatomic, strong) BTCategoryCollectionFooter *categoryCollectionFooter;
+@property (nonatomic, strong) BTCategoryMenuFooter *categoryCollectionFooter;
 
 
 @end
@@ -75,6 +75,7 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
   [BTCommunity fetchCommunityDataWithSuccess:^(BTCommunity * communityData) {
     
     self.categroys = communityData.category_list;
+    [self.hotRecommendCollectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
   } failure:^(NSError * error) {
   }];
   
@@ -119,7 +120,7 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
   if (section == 0) {
-    return self.categroys.count;
+    return 0;
   } else {
     return self.hotRecommends.count;
   }
@@ -163,11 +164,24 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
   NSString *identifier = kBTHotRecommendHeaderIdentifier;
   if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
+    if (indexPath.section == 0) {
+      
+      identifier = kBTCategoryMenuFooterIdentifier;
+    } else {
       identifier = kBTHotRecommendFooterIdentifier;
+    }
+    
   }
   UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:identifier forIndexPath:indexPath];
   if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
-    self.footerLoadingView = (BTHotRecommendFooter *)reusableView;
+    if (indexPath.section == 0) {
+     BTCategoryMenuFooter *menuFooter = (BTCategoryMenuFooter *)reusableView;
+      menuFooter.categorys = self.categroys;
+      menuFooter.delegate = self;
+    } else {
+      self.footerLoadingView = (BTHotRecommendFooter *)reusableView;
+    }
+    
   } else if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
     BTHotRecommendHeader *header = (BTHotRecommendHeader *)reusableView;
     if (indexPath.section == 0) {
@@ -184,13 +198,7 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  if (indexPath.section == 0) {
-    BTCategory *category = [self categoryAtIndexPath:indexPath];
-    BTCommunityInfoCollectionViewController *vc = [[BTCommunityInfoCollectionViewController alloc] initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
-    vc.categoryID = category.ID;
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-  } else if (indexPath.section == 1) {
+  if (indexPath.section == 1) {
     BTHotRecommendTableViewController *hotRecommendVC = [BTHotRecommendTableViewController new];
     hotRecommendVC.title = @"热门推荐";
     hotRecommendVC.postInfoArray = self.hotRecommends;
@@ -214,7 +222,8 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
   if (section == 0) {
-    return CGSizeMake(0, 0);
+    
+    return CGSizeMake(kScreen_Width, [BTCategoryMenuFooter categoryFooterHeightByCategorysCount:(int)self.categroys.count]);
   }
   return CGSizeMake(300, 50);
 }
@@ -233,6 +242,14 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
   } else {
     return ((UICollectionViewFlowLayout *)collectionViewLayout).sectionInset;
   }
+}
+
+#pragma mark - BTCategoryMenuFooterDelegate
+- (void)didSelectMenuButtonWithCategate:(BTCategory *)category {
+  BTCommunityInfoCollectionViewController *vc = [[BTCommunityInfoCollectionViewController alloc] initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
+  vc.categoryID = category.ID;
+  vc.hidesBottomBarWhenPushed = YES;
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -254,7 +271,7 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
     
     [_hotRecommendCollectionView registerNib:[UINib nibWithNibName:@"BTHotRecommendFooter" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kBTHotRecommendFooterIdentifier];
     
-    [_hotRecommendCollectionView registerClass:[BTCategoryCollectionFooter class]forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kBTCategoryCollectionFooterIdentifier];
+    [_hotRecommendCollectionView registerClass:[BTCategoryMenuFooter class]forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kBTCategoryMenuFooterIdentifier];
     
   }
   return _hotRecommendCollectionView;
@@ -272,5 +289,6 @@ static NSString *kBTCategoryCellIdentifier = @"BTCategoryCellIdentifier";
   }
   return _hotRecommendLayout;
 }
+
 
 @end

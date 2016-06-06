@@ -109,12 +109,17 @@ static const CGFloat kSeparatorViewHeight = 8;
   
   _commentsButton = [UIButton new];
   [_commentsButton setImage:[UIImage imageNamed:@"btn_group_comment"] forState:UIControlStateNormal];
+  [_commentButton addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
+  
   _likeButton = [UIButton new];
   [_likeButton setImage:[UIImage imageNamed:@"btn_group_like"] forState:UIControlStateNormal];
-  _shareButton = [UIButton new];
+  [_likeButton addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
   [_likeButton setImage:[UIImage imageNamed:@"btn_group_like_selected"] forState:UIControlStateSelected];
   
+  _shareButton = [UIButton new];
+  [_shareButton addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
   [_shareButton setImage:[UIImage imageNamed:@"btn_group_share"] forState:UIControlStateNormal];
+  
   _fristDivideImageView = [UIImageView new];
   _fristDivideImageView.image = [UIImage imageNamed:@"line_product_detail"];
   
@@ -140,6 +145,7 @@ static const CGFloat kSeparatorViewHeight = 8;
   [_likesButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
   _likesButton.titleLabel.font = [BTHotRecommendTableViewCell contentFont];
   
+  
   _commentsLabel = [UILabel new];
   _commentsLabel.font = [BTHotRecommendTableViewCell contentFont];
   _commentsLabel.textColor = [UIColor grayColor];
@@ -158,7 +164,7 @@ static const CGFloat kSeparatorViewHeight = 8;
   [_commentButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
   [_commentButton setBackgroundImage:[commentinputBG resizableImageWithCapInsets:UIEdgeInsetsMake(h, w, h, w)] forState:UIControlStateNormal];
   _commentButton.titleLabel.font = [UIFont systemFontOfSize:15];
-  
+  [_commentButton addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
   [_commentButton setTitle:@"我来说两句" forState:UIControlStateNormal];
   
   _separatorView = [UIView new];
@@ -208,6 +214,8 @@ static const CGFloat kSeparatorViewHeight = 8;
   self.pageControl.height = 10;
   self.pageControl.center = self.imagesScrollView.center;
   self.pageControl.y = self.imagesScrollView.tail - 20;
+  
+  
   
   self.commentsButton.frame = CGRectMake(kPadding, self.imagesScrollView.tail + kPadding, kCommentButtonHeight, kCommentButtonHeight);
   
@@ -380,7 +388,8 @@ static const CGFloat kSeparatorViewHeight = 8;
   self.pageControl.currentPage = (kScreen_Width / 2 + scrollView.contentOffset.x ) / kScreen_Width;
 }
 
-#pragma mark - 
+
+#pragma mark - Action
 - (void)tappedTagView:(UITapGestureRecognizer *)gesture {
   if ([gesture.view isKindOfClass:[XHTagView class]]) {
     XHTagView *tagView = (XHTagView *)gesture.view;
@@ -391,6 +400,12 @@ static const CGFloat kSeparatorViewHeight = 8;
         tagView.alpha = 1;
       }];
     }
+  }
+}
+
+- (void)tapAction {
+  if ([self.delegate respondsToSelector:@selector(tapAction)]) {
+    [self.delegate tapAction];
   }
 }
 
